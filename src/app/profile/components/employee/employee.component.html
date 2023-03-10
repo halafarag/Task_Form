@@ -1,0 +1,43 @@
+<div class="py-2">
+  <div class="container table-responsive col-10 m-auto">
+    <div class="d-flex justify-content-center align-items-center">
+      <div
+        class="card shadow p-3 mb-5 bg-body rounded border border-0"
+        style="width: 20rem"
+      >
+        <div class="card-body">
+          <h5 class="card-title">Number of all Employess</h5>
+          <p class="card-text">
+            <i class="bi bi-cart2 fs-1 text-danger"></i>
+
+            <span class="fs-1 mx-5">{{ numberOfEmployees }}</span>
+          </p>
+        </div>
+      </div>
+    </div>
+    <table class="table table-bordered table-hover bg-white shadow">
+      <thead class="bg-dark text-white">
+        <tr class="text-center">
+          <th scope="col">id</th>
+          <th scope="col">Name</th>
+          <th scope="col">Mobile Number</th>
+          <th scope="col">Email</th>
+          <th scope="col">Experince</th>
+          <th scope="col">Status</th>
+          <th scope="col">Birth Day</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="text-center" *ngFor="let emp of empList; let i = index">
+          <td>{{ emp.id }}</td>
+          <td>{{ emp.name }}</td>
+          <td>0{{ emp.mobile }}</td>
+          <td>{{ emp.email }}</td>
+          <td>{{ emp.experince }}</td>
+          <td>{{ emp.status }}</td>
+          <td>{{ emp.birthDay | date }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
